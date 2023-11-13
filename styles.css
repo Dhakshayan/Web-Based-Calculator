@@ -4,8 +4,31 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(to right, #ff6f61, #ffda59, #bada55, #5ac5c5, #4a90e2, #ad62aa);
-}
+    overflow: hidden;
+    background: linear-gradient(45deg, gold, orange, pink, purple, gold);
+    background-size: 400% 400%;
+    animation: backgroundShift 21s infinite linear;
+    transition: background-position 1s ease;
+    }
+
+    @keyframes backgroundShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      25% {
+        background-position: 100% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      75% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
 
 .calculator {
     max-width: 300px;
